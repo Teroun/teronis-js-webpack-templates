@@ -1,0 +1,33 @@
+{
+  "name": "@teronis-js/event-dispatcher",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "module":"src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Teroun/teronis-js-event-dispatcher.git"
+  },
+  "keywords": [
+    "event",
+    "dispatcher"
+  ],
+  "author": "Teroun",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Teroun/teronis-js-event-dispatcher/issues"
+  },
+  "homepage": "https://github.com/Teroun/teronis-js-event-dispatcher#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1"
+  },
+  "dependencies": {}
+}
