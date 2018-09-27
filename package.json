@@ -1,0 +1,34 @@
+{
+  "name": "@teronis-js/webpack-templates",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "dist/teronis-js-webpack-templates.js",
+  "module": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teroneko/teronis-js-webpack-templates.git"
+  },
+  "keywords": [
+    "webpack",
+    "template"
+  ],
+  "author": "teroneko",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/teroneko/teronis-js-webpack-templates/issues"
+  },
+  "homepage": "https://github.com/teroneko/teronis-js-webpack-templates#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1"
+  },
+  "dependencies": {}
+}
