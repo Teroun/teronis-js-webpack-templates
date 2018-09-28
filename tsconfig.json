@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "target": "es6",
+        "declaration": true,
+        "baseUrl": "."
+    },
+    "include": [
+        "src/**/*",
+        "node_modules/@teronis-js/**/dist/**/*"
+    ]
+}

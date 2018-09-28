@@ -1,31 +1,38 @@
 {
-  "name": "@teronis-js/event-dispatcher",
+  "name": "@teronis-js/webpack-templates",
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "module":"src/index.js",
+  "main": "dist/teronis-js-webpack-templates.js",
+  "module": "src/index.ts",
+  "types": "dist/teronis-js-webpack-templates.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Teroun/teronis-js-event-dispatcher.git"
+    "url": "git+https://github.com/teroneko/teronis-js-webpack-templates.git"
   },
   "keywords": [
-    "event",
-    "dispatcher"
+    "webpack",
+    "template"
   ],
-  "author": "Teroun",
+  "author": "teroneko",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/Teroun/teronis-js-event-dispatcher/issues"
+    "url": "https://github.com/teroneko/teronis-js-webpack-templates/issues"
   },
-  "homepage": "https://github.com/Teroun/teronis-js-event-dispatcher#readme",
+  "homepage": "https://github.com/teroneko/teronis-js-webpack-templates#readme",
   "devDependencies": {
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
+    "@babel/preset-typescript": "^7.1.0",
     "babel-loader": "^8.0.4",
+    "dts-bundle-webpack": "^1.0.0",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^5.2.1",
+    "typescript": "^3.1.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1"
   },

@@ -1,4 +1,14 @@
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else {
+		var a = factory();
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(window, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -81,101 +91,46 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/SingleEvent.js":
-/*!****************************!*\
-  !*** ./src/SingleEvent.js ***!
-  \****************************/
-/*! exports provided: SingleEvent */
+/***/ "./src/index.ts":
+/*!**********************!*\
+  !*** ./src/index.ts ***!
+  \**********************/
+/*! exports provided: printHelloWorld */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SingleEvent", function() { return SingleEvent; });
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+/* harmony import */ var _printHelloWorld__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./printHelloWorld */ "./src/printHelloWorld.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "printHelloWorld", function() { return _printHelloWorld__WEBPACK_IMPORTED_MODULE_0__["printHelloWorld"]; });
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-// events - a super-basic Javascript (publish subscribe) pattern
-// rewritten: now class-like and only one event can be fired
-var SingleEvent =
-/*#__PURE__*/
-function () {
-  function SingleEvent() {
-    _classCallCheck(this, SingleEvent);
-  }
-
-  _createClass(SingleEvent, [{
-    key: "Add",
-    value: function Add(fn) {
-      this.events = this.events || [];
-      this.events.push(fn);
-    }
-  }, {
-    key: "Remove",
-    value: function Remove(fn) {
-      if (this.events) {
-        for (var i = 0; i < this.events.length; i++) {
-          if (this.events[i] === fn) {
-            this.events.splice(i, 1);
-            break;
-          }
-        }
-
-        ;
-      }
-    }
-  }, {
-    key: "Apply",
-    value: function Apply(scope, args) {
-      if (this.events) {
-        this.events.forEach(function (fn) {
-          return fn.apply(scope, args);
-        });
-      }
-    }
-  }, {
-    key: "Call",
-    value: function Call(scope) {
-      for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-        args[_key - 1] = arguments[_key];
-      }
-
-      this.Apply(scope, args);
-    }
-  }, {
-    key: "Invoke",
-    value: function Invoke() {
-      this.Apply(undefined, arguments);
-    }
-  }]);
-
-  return SingleEvent;
-}();
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/*! exports provided: SingleEvent */
+/***/ "./src/printHelloWorld.ts":
+/*!********************************!*\
+  !*** ./src/printHelloWorld.ts ***!
+  \********************************/
+/*! exports provided: printHelloWorld */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _SingleEvent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SingleEvent */ "./src/SingleEvent.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SingleEvent", function() { return _SingleEvent__WEBPACK_IMPORTED_MODULE_0__["SingleEvent"]; });
-
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "printHelloWorld", function() { return printHelloWorld; });
+/**
+ * This function serves a simple hello world output.
+ */
+function printHelloWorld() {
+  console.log("Hello world! (webpack-templates)");
+}
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=teronis-js-event-dispatcher.js.map
+});
+//# sourceMappingURL=teronis-js-webpack-templates.js.map
