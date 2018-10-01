@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "main": "dist/teronis-js-webpack-templates.js",
+  "browser": "dist/teronis-js-webpack-templates.js",
   "module": "src/index.ts",
   "types": "dist/teronis-js-webpack-templates.d.ts",
   "scripts": {
@@ -28,10 +28,11 @@
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-typescript": "^7.1.0",
+    "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.4",
     "dts-bundle-webpack": "^1.0.0",
     "source-map-loader": "^0.2.4",
-    "ts-loader": "^5.2.1",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
     "typescript": "^3.1.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1"

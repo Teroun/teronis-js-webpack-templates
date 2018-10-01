@@ -6,7 +6,6 @@
         "baseUrl": "."
     },
     "include": [
-        "src/**/*",
-        "node_modules/@teronis-js/**/dist/**/*"
+        "src/**/*"
     ]
 }
