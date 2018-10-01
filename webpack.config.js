@@ -1,8 +1,9 @@
 const path = require('path');
+const PackageFile = require("./package.json");
 
 module.exports = {
   mode: "development",
-  entry: './src/index.js',
+  entry: path.resolve(__dirname, PackageFile.module),
   devtool: "source-map",
   module: {
     rules: [
@@ -15,8 +16,8 @@ module.exports = {
     strictExportPresence: true
   },
   output: {
-    filename: 'teronis-js-webpack-templates.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: path.basename(PackageFile.browser),
+    path: path.resolve(__dirname, path.dirname(PackageFile.browser)),
     libraryTarget: "umd"
   },
   resolve: {
