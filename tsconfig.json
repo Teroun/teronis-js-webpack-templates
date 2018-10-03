@@ -4,7 +4,8 @@
         "target": "es6",
         "declaration": true,
         "baseUrl": ".",
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "strictNullChecks": true
     },
     "include": [
         "src/**/*"
