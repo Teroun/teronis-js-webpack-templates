@@ -6,8 +6,8 @@
   "browser": "dist/teronis-js-webpack-templates.js",
   "module": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "test": "mocha -r jsdom-global/register || true",
+    "build": "webpack || true"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,10 @@
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "babel-loader": "^8.0.4",
+    "chai": "^4.2.0",
+    "jsdom": "^12.1.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^5.2.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1"
   },
