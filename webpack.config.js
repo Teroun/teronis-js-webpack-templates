@@ -2,6 +2,7 @@ const path = require('path');
 const DtsBundlePlugin = require("dts-bundle-webpack");
 const TsConfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const PackageFile = require("./package.json");
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   mode: "development",
@@ -20,6 +21,7 @@ module.exports = {
       }
     ]
   },
+  externals: [nodeExternals()],
   output: {
     filename: path.basename(PackageFile.browser),
     path: path.resolve(__dirname, path.dirname(PackageFile.browser)),
