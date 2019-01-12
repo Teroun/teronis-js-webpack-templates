@@ -1,6 +1,6 @@
 {
   "name": "@teronis-js/webpack-templates",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "private": true,
   "browser": "dist/teronis-js-webpack-templates.js",
@@ -8,13 +8,15 @@
   "types": "dist/teronis-js-webpack-templates.d.ts",
   "scripts": {
     "test": "mocha -r jsdom-global/register || true",
-    "build": "webpack || true"
+    "build": "webpack || true",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/teroneko/teronis-js-webpack-templates.git"
   },
   "keywords": [
+    "teronis",
     "webpack",
     "template"
   ],
@@ -31,7 +33,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.4",
     "chai": "^4.2.0",
-    "dts-bundle-webpack": "^1.0.0",
+    "dts-bundle-webpack": "^1.0.2",
     "jsdom": "^12.1.0",
     "jsdom-global": "^3.0.2",
     "mocha": "^5.2.0",

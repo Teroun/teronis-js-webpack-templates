@@ -1,1 +1,1 @@
-export { printHelloWorld } from "./printHelloWorld";
+export * from "./printHelloWorld";
